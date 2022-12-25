@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/basicMaterialPage.dart';
+import 'package:flutter_project/layoutMaterialPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,20 +113,33 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
       drawer: Drawer(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         child: Column(
           children: [
             ListTile(
-              leading: const Icon(Icons.abc, color: Colors.white),
+              leading: const Icon(Icons.abc, color: Colors.black),
               title: const Text(
                 "文本及样式",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const BasicMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.abc, color: Colors.black),
+              title: const Text(
+                "布局类组件",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const LayoutMaterialPage())));
               },
             ),
           ],
