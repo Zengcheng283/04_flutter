@@ -112,6 +112,26 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton.icon(
+                  icon: const Icon(Icons.send),
+                  label: const Text("发送"),
+                  onPressed: () {},
+                ),
+                OutlinedButton.icon(
+                  icon: const Icon(Icons.add),
+                  label: const Text("添加"),
+                  onPressed: () {},
+                ),
+                TextButton.icon(
+                  icon: const Icon(Icons.info),
+                  label: const Text("详情"),
+                  onPressed: () {},
+                ),
+              ],
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -119,6 +139,44 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: SizedBox(
+                height: 100.0,
+                //Flex的三个子widget，在垂直方向按2：1：1来占用100像素的空间
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        height: 30.0,
+                        color: Colors.red,
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 30.0,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Text(""),
+            const Text(""),
+            const Text(""),
+            const Text(""),
+            DecoratedBox(
+                decoration: const BoxDecoration(color: Colors.red),
+                child: Transform.scale(
+                    scale: 1.5, //放大到1.5倍
+                    child: const Text("Hello world"))),
           ],
         ),
       ),
@@ -343,7 +401,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: ((context) => const HttpTestRoute())));
+                        builder: ((context) =>
+                            const HttpRequestMaterialPage())));
               },
             ),
           ],
