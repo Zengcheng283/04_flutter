@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class LayoutMaterialPage extends StatefulWidget {
@@ -11,7 +13,7 @@ class _LayoutMaterialPage extends State<LayoutMaterialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("布局类组件")),
+        appBar: AppBar(title: const Text("4 布局类组件")),
         body: Center(
           child: Column(
             children: [

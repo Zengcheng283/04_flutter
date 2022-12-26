@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/animatedMaterialPage.dart';
+import 'package:flutter_project/animatedSwitchMaterialPage.dart';
 import 'package:flutter_project/basicMaterialPage.dart';
+import 'package:flutter_project/colorThemeMaterialPage.dart';
+import 'package:flutter_project/containerMaterialPage.dart';
+import 'package:flutter_project/infiniteListMaterialPage.dart';
 import 'package:flutter_project/layoutMaterialPage.dart';
+import 'package:flutter_project/routeBackMaterialPage.dart';
+import 'package:flutter_project/scrollControllerMaterialPage.dart';
+import 'package:flutter_project/singleChildScrollMaterialPage.dart';
+import 'package:flutter_project/staggerAnimationMaterialPage.dart';
+
+import 'fileIOMaterialPage.dart';
+import 'gestureDetectorMaterialPage.dart';
+import 'heroAnimatedMaterialPage.dart';
+import 'httpRequestMaterialPage.dart';
+import 'pointerEventMaterialPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -117,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             ListTile(
-              leading: const Icon(Icons.abc, color: Colors.black),
+              leading: const Text("3"),
               title: const Text(
                 "文本及样式",
                 style: TextStyle(color: Colors.black),
@@ -130,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.abc, color: Colors.black),
+              leading: const Text("4"),
               title: const Text(
                 "布局类组件",
                 style: TextStyle(color: Colors.black),
@@ -140,6 +155,195 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                         builder: ((context) => const LayoutMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("5"),
+              title: const Text(
+                "容器类组件",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const ContainerMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("6.2"),
+              title: const Text(
+                "SingleChildScroll",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const SingleChildScrollMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("6.3"),
+              title: const Text(
+                "InfiniteListView",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const InfiniteListView())));
+              },
+            ),
+            ListTile(
+              leading: const Text("6.4"),
+              title: const Text(
+                "滚动监听及控制",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const ScrollControllerMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("7.1"),
+              title: const Text(
+                "导航返回拦截（WillPopScope）",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const RouteBackMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("7.4"),
+              title: const Text(
+                "颜色和主题",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const ThemeTestRoute())));
+              },
+            ),
+            ListTile(
+              leading: const Text("8.1"),
+              title: const Text(
+                "原始指针事件处理",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const PointerEventMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("8.2"),
+              title: const Text(
+                "手势识别",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const GestureDetectorMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("9.2"),
+              title: const Text(
+                "动画基本结构及状态监听",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const AnimatedMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("9.4"),
+              title: const Text(
+                "Hero动画",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const HeroAnimatedMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("9.5"),
+              title: const Text(
+                "交织动画",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const StaggerAnimationMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("9.6"),
+              title: const Text(
+                "动画切换组件（AnimatedSwitcher）",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const AnimatedSwitchMaterialPage())));
+              },
+            ),
+            ListTile(
+              leading: const Text("11.1"),
+              title: const Text(
+                "文件操作",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const FileOperationRoute())));
+              },
+            ),
+            ListTile(
+              leading: const Text("11.2"),
+              title: const Text(
+                "通过HttpClient发起HTTP请求",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const HttpTestRoute())));
               },
             ),
           ],

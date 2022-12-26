@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class BasicMaterialPage extends StatefulWidget {
@@ -11,7 +13,7 @@ class _BasicMaterialPage extends State<BasicMaterialPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("文本及样式")),
+      appBar: AppBar(title: const Text("3 文本及样式")),
       body: Center(
         child: Column(
           children: [
